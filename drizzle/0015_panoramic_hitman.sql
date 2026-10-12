@@ -1,0 +1,1 @@
+ALTER TABLE `booking_payments` ADD `contactPhone` varchar(32);

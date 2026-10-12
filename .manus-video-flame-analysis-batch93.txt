@@ -1,0 +1,16 @@
+Starting video analysis...
+Submitting video analysis task...
+Task submitted (ID: video-analysis-ed41d827-0f5f-4301-bf38-bad2f53d9653)
+[8s] Status: Analyzing video content with AI...
+[11s] Status: Analysis completed
+[11s] Analysis completed!
+Full analysis result saved to: /home/ubuntu/video_20260816_111117_analysis_20260816_034356.md
+Note: This tool performs AI-based visual and audio analysis, not verbatim transcription. For detailed speech transcription, use `manus-speech-to-text` instead.
+Analysis result:
+
+以下是針對中央火焰的詳細描述：
+
+*   **頂端餘燄延伸性與形態**：頂端餘燄與主火焰呈現**連續延伸**狀態，但在銜接處迅速收窄。餘燄呈細長針狀或絲狀，寬度極窄，約僅為主火焰最寬處的 1/10；長度則相對穩定，約佔主火焰高度的 1/3 至 1/2。
+*   **顏色過渡**：火焰顏色層次分明，由下而上從**亮白色/淺黃色**過渡至**明橘色**，最頂端的餘燄則轉為深沉的**紅褐色或暗紅色**。
+*   **斷續消失節奏**：在整段影片中，頂端餘燄並未出現完全斷裂或消失的現象，而是保持一種微弱但持續的燃燒感，僅隨空氣流動產生極小幅度的左右晃動。
+*   **內層高亮光核**：中央存在一個亮度極高的光核，其形狀隨燈芯延伸呈**長橢圓形或淚滴狀**，邊界與周圍的黃色火焰呈漸進式融合，**不存在清晰的圓形邊界**。

@@ -1,0 +1,1 @@
+CREATE INDEX `bookings_user_branch_idx` ON `bookings` (`userId`,`branchId`);

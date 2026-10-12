@@ -1,0 +1,30 @@
+Starting video analysis...
+Submitting video analysis task...
+Task submitted (ID: video-analysis-e96a5a64-4d1b-4456-94e8-4c1925ee72e1)
+[8s] Status: Analyzing video content with AI...
+[11s] Status: Analysis completed
+[11s] Analysis completed!
+Full analysis result saved to: /home/ubuntu/video_金幣恢復_analysis_20260823_070825.md
+Note: This tool performs AI-based visual and audio analysis, not verbatim transcription. For detailed speech transcription, use `manus-speech-to-text` instead.
+Analysis result:
+
+這段影片是針對視覺特效設計的金幣噴灑素材，以下是詳細的內容分析：
+
+### 1. 畫面基本資訊
+*   **尺寸與比例**：影片解析度為 **1920x1080 (Full HD)**，採用 16:9 的橫向比例。
+*   **時長**：總長度約為 **3 秒**。
+*   **背景特性**：背景為純黑色（RGB: 0, 0, 0）。這種背景非常適合進行**去背處理**。在影片剪輯軟體（如 Premiere Pro, After Effects 或 Final Cut Pro）中，只需將混合模式（Blending Mode）設定為**「濾色」(Screen)** 或使用 **「亮度鍵」(Luma Key)** 即可輕鬆去除黑色背景，保留金幣主體。
+
+### 2. 金幣動態時序分析
+影片的動態過程可分為兩個主要階段：
+*   **噴灑階段 (00:00 - 00:01)**：金幣從畫面底部中心點向上快速噴發，並向四周擴散，呈現爆炸式的視覺效果。
+*   **收回/落下階段 (00:01 - 00:03)**：金幣到達最高點後受重力影響開始向下墜落，並逐漸消失在畫面底部或淡出。
+
+### 3. 火焰特效觸發建議時序
+若您計畫在金幣噴發時疊加火焰特效以增強視覺衝擊力，建議的觸發點如下：
+*   **起始畫面 (Start Frame)**：約在 **00:00:05 至 00:00:10** 之間。這是金幣剛開始從中心點爆發的瞬間，此時加入火焰可模擬「爆炸噴發」的推動力。
+*   **結束/減弱畫面 (End Frame)**：約在 **00:01:15** 左右。此時金幣已擴散至最大範圍並開始下墜，火焰應在此時開始消散或轉為餘燼效果，以符合物理邏輯。
+
+### 總結
+這是一個高品質的粒子特效素材，金幣帶有金屬光澤與旋轉動態。由於背景純黑且動態集中，非常適合用於遊戲獲獎、電商促銷或節慶賀喜等場景的合成製作。
+/home/ubuntu/upload/金幣恢復.mp4: ISO Media, MP4 v2 [ISO 14496-14]

@@ -1,0 +1,118 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1783981909486,
+      "tag": "0000_old_storm",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1783982005866,
+      "tag": "0001_regular_shen",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1783986148397,
+      "tag": "0002_tense_gunslinger",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1784090973278,
+      "tag": "0003_orange_human_torch",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1784301879248,
+      "tag": "0004_real_amazoness",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "5",
+      "when": 1784353502961,
+      "tag": "0005_wise_goblin_queen",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "5",
+      "when": 1784403664876,
+      "tag": "0006_amused_cloak",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "5",
+      "when": 1784652560335,
+      "tag": "0007_long_mister_sinister",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "5",
+      "when": 1784843332943,
+      "tag": "0008_fine_dazzler",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "5",
+      "when": 1784999416041,
+      "tag": "0009_dapper_bromley",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "5",
+      "when": 1786640142559,
+      "tag": "0010_nervous_steel_serpent",
+      "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "5",
+      "when": 1786657050264,
+      "tag": "0011_sloppy_piledriver",
+      "breakpoints": true
+    },
+    {
+      "idx": 12,
+      "version": "5",
+      "when": 1786662394175,
+      "tag": "0012_broad_bloodstrike",
+      "breakpoints": true
+    },
+    {
+      "idx": 13,
+      "version": "5",
+      "when": 1786687129314,
+      "tag": "0013_aspiring_hannibal_king",
+      "breakpoints": true
+    },
+    {
+      "idx": 14,
+      "version": "5",
+      "when": 1786928014249,
+      "tag": "0014_secret_queen_noir",
+      "breakpoints": true
+    },
+    {
+      "idx": 15,
+      "version": "5",
+      "when": 1786948007672,
+      "tag": "0015_panoramic_hitman",
+      "breakpoints": true
+    }
+  ]
+}

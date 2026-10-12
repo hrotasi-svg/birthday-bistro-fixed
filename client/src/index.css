@@ -1,0 +1,272 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* 第16批次-3: App Safe Area 修復 — 頂部內容不被手機狀態列（時間/訊號/電量）與瀏海遮蔽。
+   env(safe-area-inset-*) 在一般桌機/瀏覽器為 0，不影響網頁版面；
+   在 App WebView（viewport-fit=cover）中自動撐出狀態列高度。 */
+body {
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-left: env(safe-area-inset-left, 0px);
+  padding-right: env(safe-area-inset-right, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+/* 全螢幕固定層（視覺編輯器等）同步避開狀態列 */
+.fixed.inset-0 {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --primary: var(--color-blue-700);
+  --primary-foreground: var(--color-blue-50);
+  --sidebar-primary: var(--color-blue-600);
+  --sidebar-primary-foreground: var(--color-blue-50);
+  --chart-1: var(--color-blue-300);
+  --chart-2: var(--color-blue-500);
+  --chart-3: var(--color-blue-600);
+  --chart-4: var(--color-blue-700);
+  --chart-5: var(--color-blue-800);
+  --radius: 0.65rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.235 0.015 65);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.235 0.015 65);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.235 0.015 65);
+  --secondary: oklch(0.98 0.001 286.375);
+  --secondary-foreground: oklch(0.4 0.015 65);
+  --muted: oklch(0.967 0.001 286.375);
+  --muted-foreground: oklch(0.552 0.016 285.938);
+  --accent: oklch(0.967 0.001 286.375);
+  --accent-foreground: oklch(0.141 0.005 285.823);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.92 0.004 286.32);
+  --input: oklch(0.92 0.004 286.32);
+  --ring: oklch(0.623 0.214 259.815);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.235 0.015 65);
+  --sidebar-accent: oklch(0.967 0.001 286.375);
+  --sidebar-accent-foreground: oklch(0.141 0.005 285.823);
+  --sidebar-border: oklch(0.92 0.004 286.32);
+  --sidebar-ring: oklch(0.623 0.214 259.815);
+}
+
+.dark {
+  --primary: var(--color-blue-700);
+  --primary-foreground: var(--color-blue-50);
+  --sidebar-primary: var(--color-blue-500);
+  --sidebar-primary-foreground: var(--color-blue-50);
+  --background: oklch(0.141 0.005 285.823);
+  --foreground: oklch(0.85 0.005 65);
+  --card: oklch(0.21 0.006 285.885);
+  --card-foreground: oklch(0.85 0.005 65);
+  --popover: oklch(0.21 0.006 285.885);
+  --popover-foreground: oklch(0.85 0.005 65);
+  --secondary: oklch(0.24 0.006 286.033);
+  --secondary-foreground: oklch(0.7 0.005 65);
+  --muted: oklch(0.274 0.006 286.033);
+  --muted-foreground: oklch(0.705 0.015 286.067);
+  --accent: oklch(0.274 0.006 286.033);
+  --accent-foreground:  oklch(0.92 0.005 65);
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.488 0.243 264.376);
+  --chart-1: var(--color-blue-300);
+  --chart-2: var(--color-blue-500);
+  --chart-3: var(--color-blue-600);
+  --chart-4: var(--color-blue-700);
+  --chart-5: var(--color-blue-800);
+  --sidebar: oklch(0.21 0.006 285.885);
+  --sidebar-foreground: oklch(0.85 0.005 65);
+  --sidebar-accent: oklch(0.274 0.006 286.033);
+  --sidebar-accent-foreground:  oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.488 0.243 264.376);
+}
+
+@layer base {
+  /* 第38批次：所有既有深黃色文字統一為黑金高級材質。
+     採多段古銅／香檳金／深金反射，不使用單色黃、文字光暈或霓虹動畫。 */
+  :is(.text-amber-200, .text-amber-300, .text-amber-300\/80, .text-amber-400, .text-yellow-200, .text-yellow-300, .text-yellow-400) {
+    color: transparent;
+    background-image: linear-gradient(105deg, #6f4d1a 0%, #a77b2b 19%, #f3e4a5 42%, #bd8a2d 58%, #76531d 79%, #d9bd67 100%);
+    background-size: 180% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+  }
+
+  /* 第39批次：僅將黃色系互動框改為粉紅色。
+     文字金屬材質、非互動點綴與圖片內容均不受影響。 */
+  :is(
+    button[class*="bg-amber-"], button[class*="bg-yellow-"], button[class*="bg-orange-"],
+    button[class*="from-amber-"], button[class*="from-yellow-"], button[class*="from-orange-"],
+    [role="button"][class*="bg-amber-"], [role="button"][class*="bg-yellow-"], [role="button"][class*="bg-orange-"],
+    input[type="submit"][class*="bg-amber-"], input[type="submit"][class*="bg-yellow-"], input[type="submit"][class*="bg-orange-"]
+  ) {
+    background-color: #ec4899 !important;
+    background-image: linear-gradient(135deg, #f9a8d4 0%, #ec4899 48%, #be185d 100%) !important;
+  }
+
+  :is(
+    button[class*="hover:bg-amber-"]:hover, button[class*="hover:bg-yellow-"]:hover, button[class*="hover:bg-orange-"]:hover,
+    [role="button"][class*="hover:bg-amber-"]:hover, [role="button"][class*="hover:bg-yellow-"]:hover, [role="button"][class*="hover:bg-orange-"]:hover
+  ) {
+    background-color: #db2777 !important;
+    background-image: linear-gradient(135deg, #f472b6 0%, #db2777 48%, #9d174d 100%) !important;
+  }
+
+  /* 深黃色可點選按鈕框同步改為粉紅色，保留資訊卡與非互動邊框原樣。 */
+  :is(
+    button[class*="border-amber-"], button[class*="border-yellow-"], button[class*="border-orange-"],
+    [role="button"][class*="border-amber-"], [role="button"][class*="border-yellow-"], [role="button"][class*="border-orange-"],
+    input[type="submit"][class*="border-amber-"], input[type="submit"][class*="border-yellow-"], input[type="submit"][class*="border-orange-"]
+  ) {
+    border-color: #ec4899 !important;
+  }
+
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  /**
+   * Custom container utility that centers content and adds responsive padding.
+   *
+   * This overrides Tailwind's default container behavior to:
+   * - Auto-center content (mx-auto)
+   * - Add responsive horizontal padding
+   * - Set max-width for large screens
+   *
+   * Usage: <div className="container">...</div>
+   *
+   * For custom widths, use max-w-* utilities directly:
+   * <div className="max-w-6xl mx-auto px-4">...</div>
+   */
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem; /* 16px - mobile padding */
+    padding-right: 1rem;
+  }
+
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem; /* 24px - tablet padding */
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem; /* 32px - desktop padding */
+      padding-right: 2rem;
+      max-width: 1280px; /* Standard content width */
+    }
+  }
+}
+
+
+/* Shared responsive design frame for the two image-composed public screens.
+   Portrait phones keep the existing full-width reference. In landscape, the
+   same reference frame fits the available viewport height and letterboxes
+   horizontally instead of stretching a mobile canvas across the desktop. */
+.bistro-portrait-shell {
+  --bistro-design-ratio: 0.4733292465;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  min-height: 0;
+  margin-inline: auto;
+  overflow: hidden;
+  aspect-ratio: 1544 / 3262;
+  container-type: inline-size;
+  background: #000;
+}
+
+@media (orientation: landscape) and (min-width: 700px) {
+  .bistro-portrait-shell {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: none;
+    aspect-ratio: 1544 / 3262;
+    flex: 0 0 auto;
+  }
+}
+
+.bistro-portrait-shell > img,
+.bistro-portrait-shell > video {
+  display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bistro-portrait-shell video {
+    animation-play-state: paused;
+  }
+}
